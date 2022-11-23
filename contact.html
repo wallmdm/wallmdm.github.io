@@ -50,24 +50,35 @@
                 validEmail = false,
                 validMessage = false;
 
+            // check that name field is not an empty string and assign validity variable true status if it isn't
             if (userName.value === "") {
                 alert("Name is a required field");
             } else {
                 validName = true;
             }
+            // check that name field is not an empty string
             if (email.value === "") {
                 alert("Email is a required field");
+            // check for valid email address using regular expression
+                // first group looks for valid characters in username
+                // second check looks for @
+                // third check looks for valid characters in domain name
+                // fourth check looks for .
+                // final check looks for two- or three-character domain name
             } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
                 alert("Invalid email format.");
+            // if not an empty string and not invalid, assign true status
             } else {
                 validEmail = true;
             }
+            // check that message field is not an empty string and assign validity variable true status if it is
             if (message.value === "") {
                 alert("Message is a required field");
             } else {
                 validMessage = true;
             }
 
+            // if all three validity variables are true, "send the message" and give the user a positive confirmation
             if (validName == true && validEmail == true && validMessage == true) {
                 alert("We've received your message, thank you! We'll be in touch.");
             }
