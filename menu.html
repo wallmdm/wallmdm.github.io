@@ -4,7 +4,7 @@
         <title>Loveless Cafe</title>
     </head>
     <body>
-        <h1>Loveless Cafe</h1>
+        <h1 id="menu">Loveless Cafe</h1>
         <h2>Page Subtitle</h2>
 
         <!-- navigation -->
@@ -17,30 +17,83 @@
         <p>Quisque arcu dolor, fermentum a eleifend eget, tincidunt sed nulla. Sed non vestibulum metus. Suspendisse accumsan urna ac nibh fringilla, sit amet pulvinar quam venenatis. Suspendisse a purus viverra, dapibus nunc at, bibendum nibh. Vestibulum non augue nibh. Sed a libero in nunc malesuada varius. Phasellus imperdiet, tellus vitae varius tempor, quam felis lobortis tortor, id tempor magna nisl accumsan orci. Suspendisse potenti. </p>
 
         <ul id="filters">
-            Snacks: <input type="checkbox" name="snacks" id="snacks">
-            Drinks: <input type="checkbox" name="drinks" id="drinks">
-            Gluten free: <input type="checkbox" name="gluten" id="gluten">
+            Snacks: <input type="checkbox" name="snacks" id="snacks" checked>
+            Drinks: <input type="checkbox" name="drinks" id="drinks" checked>
+            Gluten free: <input type="checkbox" name="gluten" id="gluten" checked>
         </ul>
 
-        <ul id="menu">
-            <li>Coffee $3.50  <input type="button" value="Add coffee to cart" id="coffee"></li>
-            <li>Tea $3  <input type="button" value="Add tea to cart" id="tea"></li>
-            <li>Latte $5  <input type="button" value="Add latte to cart" id="latte"></li>
-            <li>Mocha $5  <input type="button" value="Add mocha to cart" id="mocha"></li>
-            <li>Cappucino $5  <input type="button" value="Add cappucino to cart" id="cappucino"></li>
-            <li>Muffin $4 <input type="button" value="Add muffin to cart" id="muffin"></li>
-            <li>Patty $3 <input type="button" value="Add patty to cart" id="patty"></li>
-            <li>Pastry $4 <input type="button" value="Add pastry to cart" id="pastry"></li>
+        <ul id="loveless-menu">
+            <li class="gluten drink">Coffee $3.50  <input type="button" value="Add coffee to cart" id="coffee"></li>
+            <li class="drink">Tea $3  <input type="button" value="Add tea to cart" id="tea"></li>
+            <li class="drink">Latte $5  <input type="button" value="Add latte to cart" id="latte"></li>
+            <li class="drink">Mocha $5  <input type="button" value="Add mocha to cart" id="mocha"></li>
+            <li class="drink">Cappucino $5  <input type="button" value="Add cappucino to cart" id="cappucino"></li>
+            <li class="snack">Muffin $4 <input type="button" value="Add muffin to cart" id="muffin"></li>
+            <li class="snack">Patty $3 <input type="button" value="Add patty to cart" id="patty"></li>
+            <li class="snack">Pastry $4 <input type="button" value="Add pastry to cart" id="pastry"></li>
+            <li class="gluten snack">Fruit $3 <input type="button" value="Add fruit to cart" id="fruit"></li>
         </ul>
 
         <form action="submit">
             <input type="text" value="Add total here" id="total">
             <input type="button" value="Total" id="pay">
         </form>
-
         
     </body>
     <script>
+        var snacks = document.querySelectorAll('.snack');
+        var snackBTN = document.querySelector("#snacks");
+        var drinks = document.querySelectorAll('.drink');
+        var drinkBTN = document.querySelector("#drinks");
+        var gluten = document.querySelectorAll('.gluten');
+        var glutenBTN = document.querySelector('#gluten');
+
+        console.log(gluten);
+
+        snackBTN.addEventListener('click', filterSnacks);
+        drinkBTN.addEventListener('click', filterDrinks);
+        glutenBTN.addEventListener('click', filterGluten);
+
+
+        function filterSnacks() {
+            if (snackBTN.checked == false) {
+                for(var i = 0; i < snacks.length; i++){
+                    snacks[i].style.display = "none"; // depending on what you're doing
+                }
+            }
+            else {
+                for(var i = 0; i < snacks.length; i++){
+                    snacks[i].style.display = "list-item"; // depending on what you're doing
+                }
+            }
+        }
+
+        function filterDrinks() {
+            if (drinkBTN.checked == false) {
+                for(var i = 0; i < drinks.length; i++){
+                    drinks[i].style.display = "none"; // depending on what you're doing
+                }
+            }
+            else {
+                for(var i = 0; i < drinks.length; i++){
+                    drinks[i].style.display = "list-item"; // depending on what you're doing
+                }
+            }
+        }
+
+        function filterGluten() {
+            if (glutenBTN.checked == false) {
+                for(var i = 0; i < gluten.length; i++){
+                    gluten[i].style.display = "none"; // depending on what you're doing
+                }
+            }
+            else {
+                for(var i = 0; i < gluten.length; i++){
+                    gluten[i].style.display = "list-item"; // depending on what you're doing
+                }
+            }
+        }
+
 
     </script>
 </html>
