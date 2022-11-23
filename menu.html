@@ -22,6 +22,8 @@
             Gluten free: <input type="checkbox" name="gluten" id="gluten" checked>
         </ul>
 
+        <p><strong>Options:</strong></p>
+
         <ul id="loveless-menu">
             <li class="gluten drink">Coffee $3.50  <input type="button" value="Add coffee to cart" id="coffee"></li>
             <li class="drink">Tea $3  <input type="button" value="Add tea to cart" id="tea"></li>
@@ -34,36 +36,46 @@
             <li class="gluten snack">Fruit $3 <input type="button" value="Add fruit to cart" id="fruit"></li>
         </ul>
 
+        <p><strong>Your cart:</strong></p>
+
+        <p id="cart">Your cart is empty.</p>
+        <p id="total">$0.00</p>
+
+        <p><strong>Your payment:</strong></p>
+
         <form action="submit">
-            <input type="text" value="Add total here" id="total">
-            <input type="button" value="Total" id="pay">
+            <input type="text" value="Add total here" id="cost">
+            <input type="button" value="Submit" id="pay">
         </form>
         
     </body>
     <script>
-        var snacks = document.querySelectorAll('.snack');
-        var snackBTN = document.querySelector("#snacks");
-        var drinks = document.querySelectorAll('.drink');
-        var drinkBTN = document.querySelector("#drinks");
-        var gluten = document.querySelectorAll('.gluten');
-        var glutenBTN = document.querySelector('#gluten');
 
-        console.log(gluten);
+        // FILTERS
 
+        // set variables for filters
+        var snacks = document.querySelectorAll('.snack'),
+            snackBTN = document.querySelector("#snacks"),
+            drinks = document.querySelectorAll('.drink'),
+            drinkBTN = document.querySelector("#drinks"),
+            gluten = document.querySelectorAll('.gluten'),
+            glutenBTN = document.querySelector('#gluten');
+
+        // add event listeners for filters
         snackBTN.addEventListener('click', filterSnacks);
         drinkBTN.addEventListener('click', filterDrinks);
         glutenBTN.addEventListener('click', filterGluten);
 
-
+        // filter functions
         function filterSnacks() {
             if (snackBTN.checked == false) {
                 for(var i = 0; i < snacks.length; i++){
-                    snacks[i].style.display = "none"; // depending on what you're doing
+                    snacks[i].style.display = "none"; 
                 }
             }
             else {
                 for(var i = 0; i < snacks.length; i++){
-                    snacks[i].style.display = "list-item"; // depending on what you're doing
+                    snacks[i].style.display = "list-item"; 
                 }
             }
         }
@@ -71,12 +83,12 @@
         function filterDrinks() {
             if (drinkBTN.checked == false) {
                 for(var i = 0; i < drinks.length; i++){
-                    drinks[i].style.display = "none"; // depending on what you're doing
+                    drinks[i].style.display = "none"; 
                 }
             }
             else {
                 for(var i = 0; i < drinks.length; i++){
-                    drinks[i].style.display = "list-item"; // depending on what you're doing
+                    drinks[i].style.display = "list-item"; 
                 }
             }
         }
@@ -84,15 +96,85 @@
         function filterGluten() {
             if (glutenBTN.checked == false) {
                 for(var i = 0; i < gluten.length; i++){
-                    gluten[i].style.display = "none"; // depending on what you're doing
+                    gluten[i].style.display = "none"; 
                 }
             }
             else {
                 for(var i = 0; i < gluten.length; i++){
-                    gluten[i].style.display = "list-item"; // depending on what you're doing
+                    gluten[i].style.display = "list-item"; 
                 }
             }
         }
+
+        // ORDERING
+
+        // start total counter
+        var total = 0,
+            quantity = 0;
+
+        // set variables for ordering
+        var coffee = document.querySelector('#coffee'),
+            tea = document.querySelector('#tea'),
+            mocha = document.querySelector('#mocha'),
+            latte = document.querySelector('#latte'),
+            cappucino = document.querySelector('#cappucino'),
+            patty = document.querySelector('#patty'),
+            pastry = document.querySelector('#pastry'),
+            fruit = document.querySelector('#fruit'),
+            muffin = document.querySelector('#muffin'),
+            totalText = document.querySelector('#total'),
+            cart = document.querySelector('#cart');
+
+        // set event listeners
+        coffee.addEventListener('click', add);
+        tea.addEventListener('click', add);
+        latte.addEventListener('click', add);
+        mocha.addEventListener('click', add);
+        cappucino.addEventListener('click', add);
+        patty.addEventListener('click', add);
+        pastry.addEventListener('click', add);
+        fruit.addEventListener('click', add);
+        muffin.addEventListener('click', add);
+
+        function add() {
+            if (total == 0) {
+                cart.innerHTML = "";
+            }
+            if (this.id == "coffee") {
+                total += 3.50;
+            }
+            if (this.id == "tea" || this.id == "patty" || this.id == "fruit") {
+                total += 3;
+            }
+            if (this.id == "mocha" || this.id == "latte" || this.id == "cappucino") {
+                total += 5;
+            }
+            if (this.id == "muffin" || this.id == "pastry") {
+                total += 4;
+            }
+            totalText.textContent = "$" + total;
+            
+        }
+
+        // PAYMENT
+
+        // variables for payment
+        var cost = document.querySelector("#cost"),
+            pay = document.querySelector("#pay");
+
+        // function
+        function payment() {
+            if (cost.value == total) {
+                alert("Thank you for your purchase. We are saving your items for you.");
+            } else if (cost.value > total) {
+                alert("Thank you for your purchase. A credit has been added to your account as change for your overpayment.")
+            } else {
+                alert ("Insufficient payment. Please revise and resubmit.")
+            }
+        }
+
+        // event listener
+        pay.addEventListener('click', payment);
 
 
     </script>
