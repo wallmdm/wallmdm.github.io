@@ -62,31 +62,28 @@
             glutenBTN = document.querySelector('#gluten');
 
         // add event listeners for filters
-        snackBTN.addEventListener('click', filterSnacks);
-        drinkBTN.addEventListener('click', filterDrinks);
+        snackBTN.addEventListener('click', filter);
+        drinkBTN.addEventListener('click', filter);
         glutenBTN.addEventListener('click', filterGluten);
 
         // filter functions
-        function filterSnacks() {
+        function filter() {
             if (snackBTN.checked == false) {
                 for(var i = 0; i < snacks.length; i++){
                     snacks[i].style.display = "none"; 
                 }
             }
-            else {
+            if (snackBTN.checked == true) {
                 for(var i = 0; i < snacks.length; i++){
                     snacks[i].style.display = "list-item"; 
                 }
             }
-        }
-
-        function filterDrinks() {
             if (drinkBTN.checked == false) {
                 for(var i = 0; i < drinks.length; i++){
                     drinks[i].style.display = "none"; 
                 }
             }
-            else {
+            if (drinkBTN.checked == true) {
                 for(var i = 0; i < drinks.length; i++){
                     drinks[i].style.display = "list-item"; 
                 }
@@ -102,6 +99,16 @@
             else {
                 for(var i = 0; i < gluten.length; i++){
                     gluten[i].style.display = "list-item"; 
+                }
+            }
+            if (drinkBTN.checked == false) {
+                for(var i = 0; i < drinks.length; i++){
+                    drinks[i].style.display = "none"; 
+                }
+            }
+            else if (snackBTN.checked == false) {
+                for(var i = 0; i < snacks.length; i++){
+                    snacks[i].style.display = "none"; 
                 }
             }
         }
