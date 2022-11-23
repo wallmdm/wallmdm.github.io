@@ -19,7 +19,7 @@
         <ul id="filters">
             Snacks: <input type="checkbox" name="snacks" id="snacks" checked>
             Drinks: <input type="checkbox" name="drinks" id="drinks" checked>
-            Gluten free: <input type="checkbox" name="gluten" id="gluten" checked>
+            Gluten free only: <input type="checkbox" name="gluten" id="gluten">
         </ul>
 
         <p><strong>Options:</strong></p>
@@ -47,6 +47,12 @@
             <input type="text" value="" id="cost">
             <input type="button" value="Submit" id="pay">
         </form>
+
+        <style>
+            .hide {
+                display: none;
+            }
+        </style>
         
     </body>
     <script>
@@ -64,51 +70,57 @@
         // add event listeners for filters
         snackBTN.addEventListener('click', filter);
         drinkBTN.addEventListener('click', filter);
-        glutenBTN.addEventListener('click', filterGluten);
+        glutenBTN.addEventListener('click', filter);
 
-        // filter functions
-        function filter() {
-            if (snackBTN.checked == false) {
-                for(var i = 0; i < snacks.length; i++){
-                    snacks[i].style.display = "none"; 
-                }
-            }
-            if (snackBTN.checked == true) {
-                for(var i = 0; i < snacks.length; i++){
-                    snacks[i].style.display = "list-item"; 
-                }
-            }
-            if (drinkBTN.checked == false) {
-                for(var i = 0; i < drinks.length; i++){
-                    drinks[i].style.display = "none"; 
-                }
-            }
-            if (drinkBTN.checked == true) {
-                for(var i = 0; i < drinks.length; i++){
-                    drinks[i].style.display = "list-item"; 
-                }
-            }
+        function hide(section) {
+            
         }
 
-        function filterGluten() {
-            if (glutenBTN.checked == false) {
-                for(var i = 0; i < gluten.length; i++){
-                    gluten[i].style.display = "none"; 
+        function filter() {
+            if (glutenBTN.checked == true) {
+                for (i = 0; i < snacks.length; i++) {
+                    snacks[i].classList.add("hide");
                 }
-            }
-            else {
-                for(var i = 0; i < gluten.length; i++){
-                    gluten[i].style.display = "list-item"; 
+                for (i = 0; i < drinks.length; i++) {
+                    drinks[i].classList.add("hide");
                 }
-            }
-            if (drinkBTN.checked == false) {
-                for(var i = 0; i < drinks.length; i++){
-                    drinks[i].style.display = "none"; 
+                if (snackBTN.checked == true && drinkBTN.checked == true) {
+                    for (i = 0; i < gluten.length; i++) {
+                        gluten[i].classList.remove("hide");
+                    }
+                } else if (snackBTN.checked == true && drinkBTN.checked == false) {
+                    for (i = 0; i < gluten.length; i++) {
+                        gluten[i].classList.remove("hide");
+                    }
+                    for (i = 0; i < drinks.length; i++) {
+                        drinks[i].classList.add("hide");
+                    }
+                } else if (snackBTN.checked == false && drinkBTN.checked == true) {
+                    for (i = 0; i < gluten.length; i++) {
+                        gluten[i].classList.remove("hide");
+                    }
+                    for (i = 0; i < snacks.length; i++) {
+                        snacks[i].classList.add("hide");
+                    }
                 }
-            }
-            else if (snackBTN.checked == false) {
-                for(var i = 0; i < snacks.length; i++){
-                    snacks[i].style.display = "none"; 
+            } else {
+                for (i = 0; i < snacks.length; i++) {
+                    snacks[i].classList.remove("hide");
+                }
+                for (i = 0; i < drinks.length; i++) {
+                    drinks[i].classList.remove("hide");
+                }
+                if (snackBTN.checked == true && drinkBTN.checked == false) {
+                    for (i = 0; i < drinks.length; i++) {
+                        drinks[i].classList.add("hide");
+                    }
+                } else if (snackBTN.checked == false && drinkBTN.checked == true) {
+                    for (i = 0; i < gluten.length; i++) {
+                        gluten[i].classList.remove("hide");
+                    }
+                    for (i = 0; i < snacks.length; i++) {
+                        snacks[i].classList.add("hide");
+                    }
                 }
             }
         }
