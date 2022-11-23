@@ -15,12 +15,44 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
+        <!--login form-->
+        <form action="submit">
+            Username: <input type="text" id="username" value=""><br>
+            Password: <input type="password" id="password" value="">
+            <input type="button" value="Submit Your Message" id="submit">
+        </form>
+
         <!--intro paragraph-->
+        <p id="welcome"></p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mi condimentum, sollicitudin sem quis, vehicula enim. Sed venenatis diam eget faucibus efficitur. Maecenas dictum leo vel augue ornare, quis facilisis metus viverra. Vestibulum id pellentesque tellus, sit amet pretium dui. Donec tempor vestibulum tempor. Phasellus gravida, justo at finibus condimentum, risus augue pulvinar orci, blandit egestas nulla ligula id velit. Praesent at odio vitae nisl ullamcorper porta quis quis purus. Cras a venenatis elit. Quisque iaculis lectus nunc, in commodo elit volutpat in. Proin posuere libero sit amet elit accumsan dapibus. Ut porta lacus sem, nec dictum ex laoreet ut. Vestibulum ex tellus, egestas sit amet elit vitae, laoreet laoreet turpis. Mauris quis maximus urna. Nunc ex nunc, maximus in metus a, eleifend gravida urna. Morbi malesuada ultrices venenatis. </p>
 
         
     </body>
     <script>
+        // query selectors
+        var username = document.querySelector("#username"),
+            password = document.querySelector("#password"),
+            submit = document.querySelector("#submit");
 
+            // hard coded user info for testing
+            var user1 = "mdm",
+            password1 = "slc514";
+
+        var welcome = document.querySelector("#welcome"); 
+
+        submit.addEventListener("click", login);
+
+        function login() {
+            if (username.value == user1 && password.value == password1) {
+                alert("Welcome, " + user1 + "! Thanks for logging in.");
+                welcome.textContent = "Logged in as " + user1 + ".";
+
+            } else if (username.value != user1) {
+                alert("Incorrect username");
+            } 
+            else if (username.value == user1 && password.value != password1) {
+                alert("Incorrect password");
+            }
+        }
     </script>
 </html>
