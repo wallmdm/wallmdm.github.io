@@ -44,7 +44,7 @@
         <p><strong>Your payment:</strong></p>
 
         <form action="submit">
-            <input type="text" value="Add total here" id="cost">
+            <input type="text" value="" id="cost">
             <input type="button" value="Submit" id="pay">
         </form>
         
@@ -167,10 +167,11 @@
             if (cost.value == total) {
                 alert("Thank you for your purchase. We are saving your items for you.");
             } else if (cost.value > total) {
-                alert("Thank you for your purchase. A credit has been added to your account as change for your overpayment.")
+                alert("You are trying to overpay. Did you mean to do that?")
             } else {
                 alert ("Insufficient payment. Please revise and resubmit.")
             }
+            cost.value = 0;
         }
 
         // event listener
