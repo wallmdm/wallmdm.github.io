@@ -44,7 +44,7 @@
         <p><strong>Your payment:</strong></p>
 
         <form action="submit">
-            <input type="text" value="" id="cost">
+            $ <input type="text" value="" id="cost">
             <input type="button" value="Submit" id="pay">
         </form>
 
@@ -173,6 +173,7 @@
                 total += 4;
             }
             totalText.textContent = "$" + total;
+            cart.innerHTML += "<li>Added 1 " + this.id + " to cart</li>";
         }
 
         // PAYMENT
@@ -185,12 +186,19 @@
         function payment() {
             if (cost.value == total) {
                 alert("Thank you for your purchase. We are saving your items for you.");
+                cart.innerHTML="";
+                total = 0;
             } else if (cost.value > total) {
-                alert("You are trying to overpay. Did you mean to do that?")
+                var ask = confirm("You have entered more than the total cost. Did you mean to do that?");
+                if (ask == true) {
+                    alert("Thank you your purchase and tip! We are saving your items for you.");
+                    total = 0;
+                }
             } else {
                 alert ("Insufficient payment. Please revise and resubmit.")
             }
-            cost.value = 0;
+            cost.value = "";
+            totalText.textContent = "$" + total;
         }
 
         // event listener
