@@ -81,6 +81,9 @@
             // if all three validity variables are true, "send the message" and give the user a positive confirmation
             if (validName == true && validEmail == true && validMessage == true) {
                 alert("We've received your message, thank you! We'll be in touch.");
+                userName.value = "";
+                email.value = "";
+                message.value = "";
             }
         }
     </script>
