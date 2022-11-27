@@ -75,22 +75,22 @@
     p {padding: 5px;}
     p {color: #black;}
     p {text-align: center;}
-    p {font-family: "Lucida Sans";}
+    p, table {font-family: Lucida Sans, Lucida Grande, sans-serif;}
     p {font-style: normal;}
     p {font-size: 17px;}
 
     ul {color: #404E5C;}
     ul {padding: 5px;}
-    ul {font-family: "Lucida Sans";}
+    ul {font-family: Lucida Sans, Lucida Grande, sans-serif;}
     ul {font-size: 18px;}
     
     #special {color: #404E5C;
-        font-family: "Lucida Sans";
+        font-family: Lucida Sans, Lucida Grande, sans-serif;
         font-style: normal;
         font-size: 18px;}
 
     .highlighted {color: #404E5C;
-        font-family: "Lucida Sans";
+        font-family: Lucida Sans, Lucida Grande, sans-serif;
         font-style: normal;
         font-size: 18px;}
 
