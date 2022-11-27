@@ -75,7 +75,7 @@
     p {padding: 5px;}
     p {color: #black;}
     p {text-align: center;}
-    p, table {font-family: Lucida Sans, Lucida Grande, sans-serif;}
+    p, table, form {font-family: Lucida Sans, Lucida Grande, sans-serif;}
     p {font-style: normal;}
     p {font-size: 17px;}
 
