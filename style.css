@@ -1,5 +1,4 @@
-
-    body {background: #F0FFCE;}
+body {background: #F0FFCE;}
     body {width: 90%;}
     body {margin: auto;}
 
@@ -75,27 +74,37 @@
     p {padding: 5px;}
     p {color: #black;}
     p {text-align: center;}
-    p, table, form {font-family: Lucida Sans, Lucida Grande, sans-serif;}
+    p, table, form {font-family: Lucida Sans, Lucida Grande;}
     p {font-style: normal;}
     p {font-size: 17px;}
 
     ul {color: #404E5C;}
     ul {padding: 5px;}
-    ul {font-family: Lucida Sans, Lucida Grande, sans-serif;}
+    ul {font-family: Lucida Sans, Lucida Grande;}
     ul {font-size: 18px;}
     
     #special {color: #404E5C;
-        font-family: Lucida Sans, Lucida Grande, sans-serif;
+        font-family: Lucida Sans, Lucida Grande;
         font-style: normal;
         font-size: 18px;}
 
     .highlighted {color: #404E5C;
-        font-family: Lucida Sans, Lucida Grande, sans-serif;
+        font-family: Lucida Sans, Lucida Grande;
         font-style: normal;
         font-size: 18px;}
 
     .photos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    max-width: 100%;
+    height: auto;
+    /*justify-content: center;*/}
+
+    .column {
+  float: left;
+  width: 32%;
+  padding: 5px;}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;}
