@@ -1,97 +1,100 @@
-body {background: #F0FFCE;}
-    body {width: 90%;}
-    body {margin: auto;}
+body {background: #F3EAF4;}
+body {width: 90%;}
+body {margin: auto;}
 
-    h1#home1 {font-size: 50px;}
-    h1#home1 {width: 90%;}
-    h1#home1 {margin: auto;}
-    h1#home1 {border: 5px solid lightgrey;
-              border-radius: 20px;}
-    h1#home1 {padding: 15px;}
-    h1#home1 {text-align: center;}
-    h1#home1 {color:#E1F0C4;}
-    h1#home1 {background: #404E5C;}
-    h1#home1 {font-family: "Gabriola";}
-    h1#home1 {font-weight: bold;}
+h1#home1 {font-size: 50px;}
+h1#home1 {width: 90%;}
+h1#home1 {margin: auto;}
+h1#home1 {border: 5px solid #a0a7ae;
+          border-radius: 20px;}
+h1#home1 {padding: 15px;}
+h1#home1 {text-align: center;}
+h1#home1 {color:#F3EAF4;}
+h1#home1 {background: #404E5C;}
+h1#home1 {font-family: "Gabriola";}
+h1#home1 {font-weight: bold;}
 
-    h2#home2 {padding: 5px;}
-    h2#home2 {color:#404E5C;}
-    h2#home2 {width: 20%;}
-    h2#home2 {margin: 10px auto 0 auto;}
-    h2#home2 {border: 5px solid lightgrey;
-              border-radius: 20px;}
-    h2#home2 {background:lightgrey;}
-    h2#home2 {text-align: center;}
-    h2#home2 {font-family: "Gabriola";}
-    h2#home2 {font-size: 35px;}
+h2#home2 {padding: 5px;}
+h2#home2 {color:#404E5C;}
+h2#home2 {width: 20%;}
+h2#home2 {margin: 10px auto 0 auto;}
+h2#home2 {border: 5px solid #a0a7ae;
+          border-radius: 20px;}
+h2#home2 {background: #c6cace}
+h2#home2 {text-align: center;}
+h2#home2 {font-family: "Gabriola";}
+h2#home2 {font-size: 35px;}
 
-    h1#menu1 {font-size: 50px;}
-    h1#menu1 {width: 90%;}
-    h1#menu1 {margin: auto;}
-    h1#menu1 {border: 5px solid lightgrey;
-              border-radius: 20px;}
-    h1#menu1 {padding: 15px;}
-    h1#menu1 {text-align: center;}
-    h1#menu1 {color:#E1F0C4;}
-    h1#menu1 {background: #36453B;}
-    h1#menu1 {font-family: "Gabriola";}
-    h1#menu1 {font-weight: bold;}
+h1#menu1 {font-size: 50px;}
+h1#menu1 {width: 90%;}
+h1#menu1 {margin: auto;}
+h1#menu1 {border: 5px solid #5e6a62;
+          border-radius: 20px;}
+h1#menu1 {padding: 15px;}
+h1#menu1 {text-align: center;}
+h1#menu1 {color: #F3EAF4;}
+h1#menu1 {background: #36453B;}
+h1#menu1 {font-family: "Gabriola";}
+h1#menu1 {font-weight: bold;}
 
-    h2#menu2 {padding: 5px;}
-    h2#menu2 {color:#36453B;}
-    h2#menu2 {width: 30%;}
-    h2#menu2 {margin: 10px auto 0 auto;}
-    h2#menu2 {border: 5px solid lightgrey;
-              border-radius: 20px;}
-    h2#menu2 {background:lightgrey;}
-    h2#menu2 {text-align: center;}
-    h2#menu2 {font-family: "Gabriola";}
-    h2#menu2 {font-size: 35px;}
+h2#menu2 {padding: 5px;}
+h2#menu2 {color:#36453B;}
+h2#menu2 {width: 30%;}
+h2#menu2 {margin: 10px auto 0 auto;}
+h2#menu2 {border: 5px solid #5e6a62;
+          border-radius: 20px;}
+h2#menu2 {background: #afb5b1;}
+h2#menu2 {text-align: center;}
+h2#menu2 {font-family: "Gabriola";}
+h2#menu2 {font-size: 35px;}
 
-    h1#contact1 {font-size: 50px;}
-    h1#contact1 {width: 90%;}
-    h1#contact1 {margin: auto;}
-    h1#contact1 {border: 5px solid lightgrey;
-                border-radius: 20px;}
-    h1#contact1 {padding: 15px;}
-    h1#contact1 {text-align: center;}
-    h1#contact1 {color:#E1F0C4;}
-    h1#contact1 {background: #6B0504;}
-    h1#contact1 {font-family: "Gabriola";}
-    h1#contact1 {font-weight: bold;}
+h1#contact1 {font-size: 50px;}
+h1#contact1 {width: 90%;}
+h1#contact1 {margin: auto;}
+h1#contact1 {border: 5px solid #a66968;
+            border-radius: 20px;}
+h1#contact1 {padding: 15px;}
+h1#contact1 {text-align: center;}
+h1#contact1 {color: #F3EAF4;}
+h1#contact1 {background: #6B0504;}
+h1#contact1 {font-family: "Gabriola";}
+h1#contact1 {font-weight: bold;}
 
-    h2#contact2 {padding: 5px;}
-    h2#contact2 {color: #6B0504;}
-    h2#contact2 {width: 30%;}
-    h2#contact2 {margin: 10px auto 0 auto;}
-    h2#contact2 {border: 5px solid lightgrey;
-                border-radius: 20px;}
-    h2#contact2 {background:lightgrey;}
-    h2#contact2 {text-align: center;}
-    h2#contact2 {font-family: "Gabriola";}
-    h2#contact2 {font-size: 35px;}
+h2#contact2 {padding: 5px;}
+h2#contact2 {color: #6B0504;}
+h2#contact2 {width: 30%;}
+h2#contact2 {margin: 10px auto 0 auto;}
+h2#contact2 {border: 5px solid #a66968;
+            border-radius: 20px;}
+h2#contact2 {background: #d3b4b4;}
+h2#contact2 {text-align: center;}
+h2#contact2 {font-family: "Gabriola";}
+h2#contact2 {font-size: 35px;}
 
-    p {padding: 5px;}
-    p {color: #black;}
-    p {text-align: center;}
-    p, table, form {font-family: Lucida Sans, Lucida Grande;}
-    p {font-style: normal;}
-    p {font-size: 17px;}
+p#options1 {text-align: left;}
 
-    ul {color: #404E5C;}
-    ul {padding: 5px;}
-    ul {font-family: Lucida Sans, Lucida Grande;}
-    ul {font-size: 18px;}
-    
-    #special {color: #404E5C;
-        font-family: Lucida Sans, Lucida Grande;
-        font-style: normal;
-        font-size: 18px;}
 
-    .highlighted {color: #404E5C;
-        font-family: Lucida Sans, Lucida Grande;
-        font-style: normal;
-        font-size: 18px;}
+p {padding: 5px;}
+p {color: #black;}
+p {text-align: center;}
+p, table, form {font-family: Lucida Sans, Lucida Grande;}
+p {font-style: normal;}
+p {font-size: 17px;}
+
+ul {color: #404E5C;}
+ul {padding: 5px;}
+ul {font-family: Lucida Sans, Lucida Grande;}
+ul {font-size: 18px;}
+
+#special {color: #404E5C;
+    font-family: Lucida Sans, Lucida Grande;
+    font-style: normal;
+    font-size: 18px;}
+
+.highlighted {color: #404E5C;
+    font-family: Lucida Sans, Lucida Grande;
+    font-style: normal;
+    font-size: 18px;}
 
     .photos {
     max-width: 100%;
@@ -146,3 +149,5 @@ body {background: #F0FFCE;}
     font-size: 18px;
     font-size: Lucida Sans, Lucida Grande;
   }
+
+  
