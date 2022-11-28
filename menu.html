@@ -55,7 +55,7 @@
         <p><strong>Options:</strong></p>
 
         <ul id="loveless-menu">
-            <li class="gluten drink">Coffee $3.50  <input type="button" value="Add coffee to cart" id="coffee"></li>
+            <li class="gluten drink">Coffee $3  <input type="button" value="Add coffee to cart" id="coffee"></li>
             <li class="drink">Tea $3  <input type="button" value="Add tea to cart" id="tea"></li>
             <li class="drink">Latte $5  <input type="button" value="Add latte to cart" id="latte"></li>
             <li class="drink">Mocha $5  <input type="button" value="Add mocha to cart" id="mocha"></li>
@@ -195,7 +195,7 @@
                 cart.innerHTML = "";
             }
             if (this.id == "coffee") {
-                total += 3.50;
+                total += 3;
             }
             if (this.id == "tea" || this.id == "patty" || this.id == "fruit") {
                 total += 3;
