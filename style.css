@@ -114,6 +114,10 @@ ul {font-size: 18px;}
 
   td, th {border: 1px solid black; text-align: left; padding: 2px;}
 
+  a:active, a:visited {
+    color: #000;
+  }
+
   footer {
     border-radius: 20px;
   }
@@ -130,7 +134,7 @@ ul {font-size: 18px;}
     background-color: #6B0504;
   }
 
-  footer p, footer a {
+  footer p, footer a, footer a:active, footer a:visited {
     color: #fff;
   }
 
