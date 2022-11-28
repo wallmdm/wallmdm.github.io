@@ -110,3 +110,23 @@ body {background: #F0FFCE;}
   display: table;}
 
   td, th {border: 1px solid black; text-align: left; padding: 2px;}
+
+  footer {
+    border-radius: 20px;
+  }
+
+  footer#home {
+   background-color: #404E5C;
+  }
+
+  footer#menu {
+    background-color: #36453B;
+  }
+
+  footer#contact {
+    background-color: #6B0504;
+  }
+
+  footer p, footer a {
+    color: #fff;
+  }
