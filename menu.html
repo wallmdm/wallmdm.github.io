@@ -30,13 +30,13 @@
 
         <div class="row">
             <div class="column">
-              <img src="latte.jpg" alt="lat" style="width:100%">
+              <img src="latte.jpg" alt="a photo of a latte" style="width:100%">
             </div>
             <div class="column">
-              <img src="muffin.jpg" alt="muff" style="width:100%">
+              <img src="muffin.jpg" alt="a photo of a muffin" style="width:100%">
             </div>
             <div class="column">
-              <img src="patty.png" alt="pat" style="width:100%">
+              <img src="patty.png" alt="a photo of a patty" style="width:100%">
             </div>
           </div>
 
@@ -59,17 +59,17 @@
 
         <p id="options1"><strong>Options:</strong></p>
 
-        <ul id="loveless-menu">
-            <li class="gluten drink">Coffee $3  <input type="button" value="Add coffee to cart" id="coffee"></li>
-            <li class="drink">Tea $3  <input type="button" value="Add tea to cart" id="tea"></li>
-            <li class="drink">Latte $5  <input type="button" value="Add latte to cart" id="latte"></li>
-            <li class="drink">Mocha $5  <input type="button" value="Add mocha to cart" id="mocha"></li>
-            <li class="drink">Cappucino $5  <input type="button" value="Add cappucino to cart" id="cappucino"></li>
-            <li class="snack">Muffin $4 <input type="button" value="Add muffin to cart" id="muffin"></li>
-            <li class="snack">Patty $3 <input type="button" value="Add patty to cart" id="patty"></li>
-            <li class="snack">Pastry $4 <input type="button" value="Add pastry to cart" id="pastry"></li>
-            <li class="gluten snack">Fruit $3 <input type="button" value="Add fruit to cart" id="fruit"></li>
-        </ul>
+        <div id="loveless-menu">
+            <p class="gluten drink">Coffee $3  <input type="button" value="Add coffee to cart" id="coffee"></p>
+            <p class="drink">Tea $3  <input type="button" value="Add tea to cart" id="tea"></p>
+            <p class="drink">Latte $5  <input type="button" value="Add latte to cart" id="latte"></p>
+            <p class="drink">Mocha $5  <input type="button" value="Add mocha to cart" id="mocha"></p>
+            <p class="drink">Cappucino $5  <input type="button" value="Add cappucino to cart" id="cappucino"></p>
+            <p class="snack">Muffin $4 <input type="button" value="Add muffin to cart" id="muffin"></p>
+            <p class="snack">Patty $3 <input type="button" value="Add patty to cart" id="patty"></p>
+            <p class="snack">Pastry $4 <input type="button" value="Add pastry to cart" id="pastry"></p>
+            <p class="gluten snack">Fruit $3 <input type="button" value="Add fruit to cart" id="fruit"></p>
+        </div>
 
         <p><strong>Your cart:</strong></p>
 
@@ -79,8 +79,10 @@
         <p id="total">$0.00</p>
 
 
-            $ <input type="text" value="" id="cost">
-            <input type="button" value="Submit" id="pay">
+            <form action="submit" id="pay">
+                $ <input type="text" value="" id="cost">
+                <input type="button" value="Submit" id="pay">
+            </form>
 
         <style>
             .hide {

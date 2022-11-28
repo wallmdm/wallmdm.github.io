@@ -162,3 +162,24 @@ img {
   }
 
   
+
+  #loveless-menu p {
+    text-align: left;
+  }
+
+  #submit {
+    margin-top: 10px;
+  }
+
+  .exterior {
+text-align: center;
+  }
+
+  .contact {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  #pay {
+    text-align: center;
+  }
