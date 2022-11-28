@@ -141,3 +141,8 @@ body {background: #F0FFCE;}
     margin: 20px 0;
     text-align: center;
   }
+
+  input[type=button] {
+    font-size: 18px;
+    font-size: Lucida Sans, Lucida Grande;
+  }
