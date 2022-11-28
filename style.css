@@ -108,3 +108,5 @@ body {background: #F0FFCE;}
   content: "";
   clear: both;
   display: table;}
+
+  td, th {border: 1px solid black; text-align: left; padding: 2px;}
